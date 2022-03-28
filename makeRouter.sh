@@ -7,7 +7,7 @@
 # to create a SNAPshot of your Fedora Server before experimenting so that you can revert to your working system 
 # after testing. 
 #!/bin/bash
-echo Enter a Internal Network Interface
+echo Enter the Internal Network Interface
 read varname
 echo Enter the External Network Interface
 read varname1
