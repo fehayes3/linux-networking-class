@@ -12,7 +12,7 @@ read varname
 echo Enter the External Network Interface
 read varname1
 echo$(sudo hostnamectl set-hostname $varname)
-echo$( ifconfig  $varname 20.30.40.1
+echo$(ifconfig  $varname 20.30.40.1
  ifconfig  $varname netmask 255.255.255.0 
  ifconfig  $varname broadcast 20.30.40.255
  echo “1” >  /proc/sys/net/ipv4/ip_forward
