@@ -10,7 +10,23 @@
 #and modify the true target files. 
 
 
-
 echo Enter a New Domain Name
 read varname
-cp  /var/named/example.org.db /var/named/$varname.db
+echo$(cp  /var/named/example.org.db /var/named/$varname.db)
+# Assign the filename
+filename="/var/named/$varname.db"
+# Swap the names in the file
+sed -i "s/example.org/$varname/" $filename
+
+echo$(cp  /var/named/example.org.rev /var/named/$varname.rev)
+# Assign the filename
+filename="/var/named/$varname.rev"
+# Swap the names in the file
+sed -i "s/example.org/$varname/" $filename
+
+echo$(cp  /etc/named.conf /etc/$varname.named.conf)
+# Assign the filename
+filename="/etc/$varname.named.conf"
+# Swap the names in the file
+sed -i "s/example.org/$varname/" $filename
+
